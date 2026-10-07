@@ -1,4 +1,4 @@
-Bosonic-cutoff convergence of the effective Hermitian Hamiltonian
+#Bosonic-cutoff convergence of the effective Hermitian Hamiltonian
 This folder reports the convergence of the lowest 20 eigenenergies of the effective Hermitian Hamiltonian \(H_H\) with respect to the bosonic cutoff \(N\).
 Parameters
 - \(\Delta=5.0\), \(\epsilon=1.7340\), \(g=4.5\)

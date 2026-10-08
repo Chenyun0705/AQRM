@@ -28,16 +28,6 @@ The bundled `deom` source files are necessary for the least-square fitting:
 - `deom/deom.py` contains the implementation of `decompose_spe`, which is used to decompose the Brownian-oscillator spectrum and construct the original correlation function.
 - `deom/spectrum/` contains the spectral-decomposition modules imported by `deom.py`. These source files must remain in the displayed directory structure.
 
-Generated cache folders such as `__pycache__/` and compiled files such as `*.pyc` are not required and are not included.
-
-Do not rename the `deom` folder to `DEOM`, because the notebook imports it with:
-
-```python
-from deom import decompose_spe
-```
-
-Folder names are case-sensitive on Linux.
-
 ## Least-square fitting definition
 
 The Brownian-oscillator response function is
@@ -65,9 +55,9 @@ $$
 The fitting interval is $0\le t\le80$, with 10,001 uniformly spaced time points. Uniform weighting is used, and the residual vector is
 
 $$
-\mathbf r=
-[\operatorname{Re}(C_{\mathrm{fit}}-C),
-\operatorname{Im}(C_{\mathrm{fit}}-C)].
+\mathbf{r}=
+[\mathrm{Re}(C_{\mathrm{fit}}-C),
+\mathrm{Im}(C_{\mathrm{fit}}-C)].
 $$
 
 The five real fitting parameters are introduced through
@@ -89,7 +79,7 @@ Running the notebook prints:
 - the derived effective parameters;
 - the SSE, RMSE, maximum absolute error, and relative $L_2$ error.
 
-The notebook also displays the time-domain and frequency-domain comparison figures. It does not save data or figures to disk.
+The notebook also displays the time-domain and frequency-domain comparison figures. 
 
 The reported formal $1\sigma$ errors are calculated from the local least-square fitting covariance matrix under the uniform independent-residual assumption. They are fitting-error estimates, not experimental confidence intervals.
 
